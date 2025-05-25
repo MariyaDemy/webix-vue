@@ -33,13 +33,22 @@
 						<p>Regular table</p>
 
 						<table class='etable'>
-						<th>Value</th><th>Name</th><th>Last</th><th>Address</th>
-							<tr v-for="row in gridData">
-								<td>{{row.value}}</td>
-								<td>{{row.name}}</td>
-								<td>{{row.last}}</td>
-								<td>{{row.address}}</td>
-							</tr>
+              <thead>
+                <tr>
+                  <th>Value</th>
+                  <th>Name</th>
+                  <th>Last</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="row in gridData">
+                  <td>{{row.value}}</td>
+                  <td>{{row.name}}</td>
+                  <td>{{row.last}}</td>
+                  <td>{{row.address}}</td>
+							  </tr>
+              </tbody>
 						</table>
 					</div>
 				`,

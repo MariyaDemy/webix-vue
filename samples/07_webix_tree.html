@@ -35,20 +35,31 @@
 						<p>Regular table</p>
 
 						<table class='etable'>
-						<th>Value</th><th>Name</th><th>Last</th><th>Address</th>
-							<tr v-for="row in treeData">
-								<td>{{row.value}}</td>
-								<td>{{row.name}}
-								<table class="etable">
-									<tr v-for="sub in row.data">
-										<td>{{sub.name}}</td>
-									</tr>
-								</table>
-								</td>
-									<td>{{row.last}}</td>
-									<td>{{row.address}}</td>
+              <thead>
+                <tr>
+                  <th>Value</th>
+                  <th>Name</th>
+                  <th>Last</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="row in treeData">
+                  <td>{{row.value}}</td>
+                  <td>{{row.name}}
+                    <table class="etable">
+                      <tbody>
+                        <tr v-for="sub in row.data">
+                          <td>{{sub.name}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td>{{row.last}}</td>
+                  <td>{{row.address}}</td>
 								</tr>
-							</table>
+              </tbody>
+						</table>
 					</div>
 				`,
         data() {
